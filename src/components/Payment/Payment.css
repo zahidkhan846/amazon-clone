@@ -1,0 +1,36 @@
+.payment {
+  background-color: #fff;
+}
+
+.payment-container > h1 {
+  text-align: center;
+  background-color: #eaeded;
+  padding: 0.5rem 0;
+}
+
+.payment-container > h1 > a {
+  color: #111;
+}
+
+.payment-section {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  margin: 1rem 0;
+  padding: 0 2rem;
+  border-bottom: 1px solid grey;
+}
+
+.payment-section h3 {
+  padding: 0.5rem 0;
+}
+
+.payment-address p {
+  line-height: 1.6;
+}
+
+.payment-address,
+.payment-order,
+.paymentmethod {
+  margin-bottom: 0.5rem;
+}
