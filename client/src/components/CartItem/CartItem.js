@@ -19,7 +19,7 @@ function CartItem({ cartItem }) {
         <p>{desc}</p>
         <p className="py-5">Qunatity: 0</p>
         <h4 className="meta-price">
-          <span>$</span>
+          <span>₹</span>
           {price}
         </h4>
         <button

@@ -30,7 +30,7 @@ function Header() {
             {currentUser ? (
               <div onClick={signOutUser}>
                 <span className="line-1">
-                  Hello, {user.userName?.split(" ")[0]}
+                  Hello, {user && user.userName?.split(" ")[0]}
                 </span>
                 <span className="line-2">Logout</span>
               </div>
@@ -42,12 +42,16 @@ function Header() {
             )}
           </li>
           <li>
-            <span className="line-1">Return</span>
-            <span className="line-2">& Orders</span>
+            <Link to="/orders">
+              <span className="line-1">Return</span>
+              <span className="line-2">& Orders</span>
+            </Link>
           </li>
           <li>
-            <span className="line-1">Your</span>
-            <span className="line-2">Prime</span>
+            <Link to="prime">
+              <span className="line-1">Your</span>
+              <span className="line-2">Prime</span>
+            </Link>
           </li>
           <li>
             <Link to="/checkout" className="cart">

@@ -8,10 +8,16 @@ import Payment from "./components/Payment/Payment";
 import CreateAccount from "./components/Auth/CreateAccount";
 import { useAuth } from "./context/AuthContext";
 import { useUserData } from "./context/UserContext";
+import { loadStripe } from "@stripe/stripe-js";
+import { STRIPE_PUB_KEY } from "./config/secret";
+import { Elements } from "@stripe/react-stripe-js";
+import Orders from "./components/Orders/Orders";
 
 function App() {
   const { currentUser } = useAuth();
   const { getUserData } = useUserData();
+
+  const promise = loadStripe(STRIPE_PUB_KEY);
 
   useEffect(() => {
     if (currentUser) {
@@ -37,7 +43,9 @@ function App() {
           render={() => (
             <>
               <Header />
-              <Payment />
+              <Elements stripe={promise}>
+                <Payment />
+              </Elements>
             </>
           )}
         />
@@ -47,6 +55,14 @@ function App() {
           render={() => (
             <>
               <Header /> <Checkout />
+            </>
+          )}
+        />
+        <Route
+          path="/orders"
+          render={() => (
+            <>
+              <Header /> <Orders />
             </>
           )}
         />

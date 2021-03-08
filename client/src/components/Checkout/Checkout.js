@@ -36,12 +36,12 @@ function Checkout() {
             <p className="icon-info">
               <InfoIcon className="icon" />
               <span>
-                Add $25.00 of eligible items to your order to qualify for FREE
+                Add ₹500.00 of eligible items to your order to qualify for FREE
                 Delivery. Details
               </span>
             </p>
             <p>
-              Subtotal ({cart && cart.length} items): {getTotalPrice(cart)}
+              Subtotal ({cart && cart.length} items): ₹ {getTotalPrice(cart)}
             </p>
             <p>
               <Checkbox />
