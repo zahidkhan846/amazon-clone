@@ -54,7 +54,7 @@ function Payment() {
           .set({
             order: cart,
             amount: paymentIntent.amount,
-            createdAt: paymentIntent.created,
+            createdAt: Date.now(),
           });
 
         setSucceeded(true);

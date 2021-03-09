@@ -48,7 +48,7 @@ function Header() {
             </Link>
           </li>
           <li>
-            <Link to="prime">
+            <Link to="/prime">
               <span className="line-1">Your</span>
               <span className="line-2">Prime</span>
             </Link>

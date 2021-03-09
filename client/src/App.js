@@ -9,9 +9,10 @@ import CreateAccount from "./components/Auth/CreateAccount";
 import { useAuth } from "./context/AuthContext";
 import { useUserData } from "./context/UserContext";
 import { loadStripe } from "@stripe/stripe-js";
-import { STRIPE_PUB_KEY } from "./config/secret";
 import { Elements } from "@stripe/react-stripe-js";
-import Orders from "./components/Orders/Orders";
+import Orders from "./pages/Orders";
+import PrimeVideos from "./pages/PrimeVideos";
+import { STRIPE_PUB_KEY } from "./config/secret";
 
 function App() {
   const { currentUser } = useAuth();
@@ -63,6 +64,14 @@ function App() {
           render={() => (
             <>
               <Header /> <Orders />
+            </>
+          )}
+        />
+        <Route
+          path="/prime"
+          render={() => (
+            <>
+              <Header /> <PrimeVideos />
             </>
           )}
         />
