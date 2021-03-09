@@ -36,3 +36,14 @@
 .main-title h4 {
   font-size: 21px;
 }
+
+@media (max-width: 600px) {
+  .date-total {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .o-id {
+    display: none;
+  }
+}

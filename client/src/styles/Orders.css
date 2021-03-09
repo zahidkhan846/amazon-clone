@@ -17,3 +17,13 @@
   font-weight: 400;
   padding: 1rem 0;
 }
+
+@media (max-width: 600px) {
+  .orders h1 {
+    text-align: center;
+  }
+
+  .orders-container {
+    padding: 1rem;
+  }
+}

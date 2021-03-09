@@ -27,7 +27,7 @@ function Order({ order }) {
               </li>
             </div>
             <div>
-              <li>
+              <li className="o-id">
                 <span>ORDER #</span>
                 <span>{id}</span>
               </li>
