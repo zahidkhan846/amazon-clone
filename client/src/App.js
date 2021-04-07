@@ -26,6 +26,8 @@ function App() {
     }
   }, [currentUser]);
 
+  console.log(currentUser);
+
   return (
     <Router>
       <Switch>
